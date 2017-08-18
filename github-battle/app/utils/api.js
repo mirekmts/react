@@ -1,18 +1,21 @@
 var axios = require('axios');
 
-var id = "ID";
-var sec "Secret";
+var id = "Iv1.461265a6a6b05c0e";
+var sec = "d3da84e76dbf9e873e91294d2b926ac7c9c599ee";
+// var id = "YOUR_CLIENT_ID";
+// var sec = "YOUR_SECRET_ID";
 var params = "?client_id=" + id + "&client_secret=" + sec;
 
-function getProfile(username) {
-    return axios.get('https//api.github.com/users/' + username + params)
-        .then(function(user) {
-            return user.data;
-        });
+
+function getProfile (username) {
+  return axios.get('https://api.github.com/users/' + username + params)
+    .then(function (user) {
+      return user.data;
+    });
 }
 
-function getRepos(username) {
-    return axios.get('https//api.github.com/users/' + username + '/repos' + params + '&per_page=100')
+function getRepos (username) {
+  return axios.get('https://api.github.com/users/' + username + '/repos' + params + '&per_page=100');
 }
 
 function getStarCount(repos) {
@@ -23,7 +26,7 @@ function getStarCount(repos) {
 
 function calculateScore(profile, repos) {
     var followers = profile.followers;
-    var totalStars - getStarCount(repos);
+    var totalStars = getStarCount(repos);
 
     return (followers * 3) + totalStars;
 }
@@ -48,16 +51,13 @@ function getUserData(player) {
     });
 }
 
-function sortPlayers(players {
+function sortPlayers(players) {
     return players.sort(function(a, b) {
         return b.score - a.score;
     });
-})
+}
 
-api.battle(['tyler', 'ean'])
-    .then(function(players) {
-        players
-    })
+
 
 module.exports = {
     battle: function(players) {
