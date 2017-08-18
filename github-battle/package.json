@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "build": "cross-env NODE_ENV=production webpack -p",
+    "deploy": "npm run build && firebase deploy",
+    "firebase-init": "firebase login && firebase init"
   },
   "babel": {
     "presets": [
@@ -13,10 +15,11 @@
       "react"
     ]
   },
-  "author": "",
+  "author": "Miroslaw Stasiak",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.16.2",
+    "prop-types": "^15.5.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.1.2"
@@ -26,7 +29,9 @@
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.0.5",
     "css-loader": "^0.28.4",
+    "firebase-tools": "^3.9.2",
     "html-webpack-plugin": "^2.30.1",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.5",
