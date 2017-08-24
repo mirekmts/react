@@ -7,15 +7,17 @@ import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import App from './components/App';
 import HomePage from './components/home/HomePage';
 import AboutPage from './components/about/AboutPage';
+import CoursePage from './components/course/CoursePage';
 
 class Routes extends React.Component {
     render() {
         return (
             <Router>
-                <div className='container'>
+                <div className=''>
                     <App />
                     <Switch>
                         <Route exact path='/' component={HomePage} />
+                        <Route path='/courses' component={CoursePage} />
                         <Route path='/about' component={AboutPage} />
                         <Route render = { function() {
                             return <p>Not found </p>
