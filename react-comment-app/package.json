@@ -7,21 +7,17 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp watch"
   },
-  "author": "Carlos Souza <carloshrsouza@gmail.com> (http://csouza.me/)",
-  "license": "ISC",
+  "author": "Miroslaw Stasiak",
+  "license": "",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/codeschool/babel-with-gulp.git"
+    "url": "https://github.com/mirekmts/react/tree/master/comment"
   },
   "keywords": [
     "babel",
     "gulp",
     "es2015"
   ],
-  "bugs": {
-    "url": "https://github.com/codeschool/babel-with-gulp/issues"
-  },
-  "homepage": "https://github.com/codeschool/babel-with-gulp#readme",
   "devDependencies": {
     "babel-core": "^6.7.6",
     "babel-preset-es2015": "^6.1.18",
