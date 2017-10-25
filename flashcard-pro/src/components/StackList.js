@@ -6,7 +6,7 @@ import stacks from '../data/stacks.json';
 
 import { setStack, loadStacks } from '../actions';
 
-class StackList extends Component {
+export class StackList extends Component {
 
     componentDidMount() {
         if (this.props.stacks.length === 0) {
@@ -14,7 +14,7 @@ class StackList extends Component {
         }
     }
     render() {
-        console.log('stacklist porps', this.props)
+        // console.log('stacklist porps', this.props)
         return (
             <div>
                 {

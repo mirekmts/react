@@ -5,7 +5,7 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { addStack } from '../actions';
 
 
-class StackForm extends Component {
+export class StackForm extends Component {
     constructor(){
         super();
 
